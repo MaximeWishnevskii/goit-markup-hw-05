@@ -231,7 +231,7 @@ body {
   margin: 0 auto 30px;
   max-width: 696px;
 }
-.hero-section .btn {
+.btn {
   color: var(--white-text-color);
   background-color: var(--accent-color);
   border: 0;
@@ -483,6 +483,7 @@ address {
 .footer-social-box {
   width: 206px;
   height: 80px;
+  margin-right: 93px;
 }
 .social-title {
   font-weight: bold;
@@ -517,6 +518,27 @@ address {
 .footer-social-link:hover,
 .footer-socisl-link:focus {
   background-color: var(--accent-color);
+}
+/* SUBSCRIBE FORM */
+.footer-subscribe-form .btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 26px;
+}
+.footer-input-field {
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  outline: none;
+  color: var(--primary-background-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.footer-btn-icon {
+  margin-left: 10px;
 }
 /* END FOOTER  END WEBSTUDIO */
 
@@ -642,7 +664,7 @@ address {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  height: 580px;
+  padding: 40px;
   background-color: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -666,5 +688,135 @@ address {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--title-color);
+}
+.modal-form-input-wrapper {
+  display: block;
+  position: relative;
+  margin-top: 4px;
+  color: var(--title-color);
+}
+
+.form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  padding-left: 42px;
+  cursor: pointer;
+}
+.form-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.form-input:focus + .modal-form-icon {
+  color: var(--accent-color);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  display: block;
+  fill: currentColor;
+}
+.form-message-area {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+.form-message-area::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-message-area:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.form-сheckbox {
+  position: relative;
+  cursor: pointer;
+}
+.checkbox-custom-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 2px;
+  margin-right: 7px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-checkbox-input:focus + .checkbox-custom-icon {
+  border-color: var(--accent-color);
+}
+.form-checkbox-input:checked + .checkbox-custom-icon {
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.form-submit-button {
+  align-self: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  padding: 10px 32px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--white-text-color);
+  background-color: var(--accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 30px;
+}
+.form-submit-button:hover,
+.form-submit-button:focus {
+  background-color: var(--second-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* END MODAL WINDOW */
